@@ -4,7 +4,7 @@
 
 ## Author
 
-** ninemilli.song **
+**ninemilli.song**
 
 Welcome to my [page](https://github.com/ninemilli-song), some funny things in there.
 
