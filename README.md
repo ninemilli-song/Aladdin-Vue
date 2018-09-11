@@ -1,9 +1,12 @@
-# dongmibang
+# Aladdin-Vue
 
 > A Vue.js project
 
 ## Author
 
+**ninemilli.song**
+
+Welcome to my [page](https://github.com/ninemilli-song), some funny things in there.
 
 ## Build Setup
 
