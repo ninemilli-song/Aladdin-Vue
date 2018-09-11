@@ -333,77 +333,77 @@ export default {
       title: "",
       floor3_2_table: {},
       floor3_2_table_grid_data: [],
-      yjzl: {},                 // 业绩总览
-      fhps: {},                 // 分红配送
-      businessInfo: '',          // 公司业务情况
-      composition: {},           // 主营构成
-      finance: {},               // 主要财务指标
-      contrast: {},              // 同业业绩对比
-      strategy: '',               // 发展战略
-      management: '',              // 经营计划
+      yjzl: {}, // 业绩总览
+      fhps: {}, // 分红配送
+      businessInfo: "", // 公司业务情况
+      composition: {}, // 主营构成
+      finance: {}, // 主要财务指标
+      contrast: {}, // 同业业绩对比
+      strategy: "", // 发展战略
+      management: "", // 经营计划
       financeTabs: [
         {
-          label: '销售毛利率',
-          value: 'rate'
+          label: "销售毛利率",
+          value: "rate"
         },
         {
-          label: '净资产收益率',
-          value: 'profit'
+          label: "净资产收益率",
+          value: "profit"
         },
         {
-          value: 'mgjzc',
-          label: '每股净资产'
+          value: "mgjzc",
+          label: "每股净资产"
         },
         {
-          value: 'jbmgsy',
-          label: '每股收益'
+          value: "jbmgsy",
+          label: "每股收益"
         },
         {
-          value: 'mgjyxjl',
-          label: '每股经营性现金流'
+          value: "mgjyxjl",
+          label: "每股经营性现金流"
         },
         {
-          value: 'total_assets',
-          label: '总资产'
+          value: "total_assets",
+          label: "总资产"
         },
         {
-          value: 'total_equity',
-          label: '净资产'
+          value: "total_equity",
+          label: "净资产"
         },
         {
-          value: 'monetary_resources',
-          label: '货币资金'
+          value: "monetary_resources",
+          label: "货币资金"
         },
         {
-          value: 'goods_in_stock',
-          label: '存货'
+          value: "goods_in_stock",
+          label: "存货"
         },
         {
-          value: 'totalcost',
-          label: '费用总计'
-        },
+          value: "totalcost",
+          label: "费用总计"
+        }
       ],
       selectedFinanceTab: 0,
       tabOptions: {
-        activeColor: '#000',
+        activeColor: "#000",
         lineWidth: 0
       },
       shareholderTabs: [
         {
-          label: '新进股东',
-          value: 'increase'
+          label: "新进股东",
+          value: "increase"
         },
         {
-          label: '增持股东',
-          value: 'progress'
+          label: "增持股东",
+          value: "progress"
         },
         {
-          value: 'reduce',
-          label: '减持股东'
+          value: "reduce",
+          label: "减持股东"
         },
         {
-          value: 'exit',
-          label: '退出股东'
+          value: "exit",
+          label: "退出股东"
         }
       ],
       selectedShareholderTab: 0,
@@ -461,20 +461,23 @@ export default {
     async getYjzlInfo() {
       const result = await YJZLINFO();
       if (result.code === 1) {
-        console.log('yjzl data: ', result.result);
+        console.log("yjzl data: ", result.result);
         this.yjzl = result.result;
         const data = result.result;
-         
+
         data.list.forEach((item, index) => {
-          $(`.floor_1_main_${ index + 1 } .name`).html(item.name);
-          $(`.floor_1_main_${ index + 1 } .number h5`).html(item.number);
-          
+          $(`.floor_1_main_${index + 1} .name`).html(item.name);
+          $(`.floor_1_main_${index + 1} .number h5`).html(item.number);
+
           if (item.growth > 0) {
-            $(`.floor_1_main_${ index + 1 } .growth`).html(item.growth ? '+' + item.growth + '%' : '-');
-            $(`.floor_1_main_${ index + 1 } .growth`).css("color", "red");
-          }
-          else {
-            $(`.floor_1_main_${ index + 1 } .growth`).html(item.growth ? item.growth + '%' : '-');
+            $(`.floor_1_main_${index + 1} .growth`).html(
+              item.growth ? "+" + item.growth + "%" : "-"
+            );
+            $(`.floor_1_main_${index + 1} .growth`).css("color", "red");
+          } else {
+            $(`.floor_1_main_${index + 1} .growth`).html(
+              item.growth ? item.growth + "%" : "-"
+            );
           }
         });
       }
@@ -486,7 +489,7 @@ export default {
     async getFhpsInfo() {
       const result = await FHPSINFO();
       if (result.code === 1) {
-        console.log('fhps data: ', result.result);
+        console.log("fhps data: ", result.result);
         this.fhps = result.result;
       }
     },
@@ -494,7 +497,7 @@ export default {
     async getBusinessInfo() {
       const result = await BUSINESSINFO();
       if (result.code === 1) {
-        console.log('fhps data: ', result.result);
+        console.log("fhps data: ", result.result);
         // this.businessInfo = result.result;
         const businessInfo = result.result;
 
@@ -506,7 +509,7 @@ export default {
     async getComposition() {
       const result = await COMPOSITION();
       if (result.code === 1) {
-        console.log('getComposition data: ', result.result);
+        console.log("getComposition data: ", result.result);
 
         this.composition = result.result;
       }
@@ -515,7 +518,7 @@ export default {
     async getFinance() {
       const result = await FINANCE();
       if (result.code === 1) {
-        console.log('getFinance data: ', result.result);
+        console.log("getFinance data: ", result.result);
 
         this.finance = result.result;
 
@@ -524,11 +527,11 @@ export default {
     },
 
     onFinanceChanged(item, index) {
-      console.log('onFinanceChanged data: ', item);
+      console.log("onFinanceChanged data: ", item);
       this.renderFinanceChart(item.value);
     },
 
-    renderFinanceChart(key = 'rate') {
+    renderFinanceChart(key = "rate") {
       // 画图 floor4_1_chart
       const data = this.finance[key];
       // console.log(CHYSINFORES)
@@ -543,12 +546,12 @@ export default {
       myChart.setOption(CHARTDATA.floor4_1_data);
       myChart.setOption({
         textStyle: {
-          color: '#333'
+          color: "#333"
         },
         xAxis: {
           axisLine: {
             lineStyle: {
-              color: "#000",
+              color: "#000"
             }
           },
           data: date
@@ -573,10 +576,10 @@ export default {
     /**
      * 同业业绩对比图表
      */
-    renderContracstChart(key = 'rate') {
+    renderContracstChart(key = "rate") {
       // 画图 floor4_1_chart
       const data = this.contrast[key].reverse();
-      console.log('renderContracstChart data: ', this.contrast);
+      console.log("renderContracstChart data: ", this.contrast);
       let category = [];
       let number = [];
       $.each(data, (i, item) => {
@@ -588,21 +591,21 @@ export default {
       myChart.setOption(CHARTDATA.floor5_data);
       myChart.setOption({
         textStyle: {
-          color: '#000'
+          color: "#000"
         },
         yAxis: {
-          "axisLabel": {
-            "textStyle": {
-                "color": "#000"
+          axisLabel: {
+            textStyle: {
+              color: "#000"
             },
-            "formatter": function(value,index) {
-                var num = data[index];
-                if(num.rank==0){
-                    return  value;
-                }else {
-                    return  num.rank+" "+value;
-                }
-            },
+            formatter: function(value, index) {
+              var num = data[index];
+              if (num.rank == 0) {
+                return value;
+              } else {
+                return num.rank + " " + value;
+              }
+            }
           },
           data: category
         },
@@ -610,16 +613,16 @@ export default {
           {
             data: number,
             itemStyle: {
-              "normal": {
-                  "color": function(params) {
-                      if (params.dataIndex == 0){
-                          return "#355e82";
-                      }else if(params.dataIndex == data.length - 1){
-                          return "#b73131";
-                      }else {
-                          return "#03A0A7"
-                      }
+              normal: {
+                color: function(params) {
+                  if (params.dataIndex == 0) {
+                    return "#355e82";
+                  } else if (params.dataIndex == data.length - 1) {
+                    return "#b73131";
+                  } else {
+                    return "#03A0A7";
                   }
+                }
               }
             }
           }
@@ -633,7 +636,7 @@ export default {
     async getContrast() {
       const result = await CONTRAST();
       if (result.code === 1) {
-        console.log('getContrast data: ', result.result);
+        console.log("getContrast data: ", result.result);
 
         this.contrast = result.result;
 
@@ -647,7 +650,7 @@ export default {
     async getStrategy() {
       const result = await STRATEGY();
       if (result.code === 1) {
-        console.log('getStrategy data: ', result.result);
+        console.log("getStrategy data: ", result.result);
 
         this.strategy = result.result;
       }
@@ -659,7 +662,7 @@ export default {
     async getManagement() {
       const result = await MANAGEMENT();
       if (result.code === 1) {
-        console.log('getManagement data: ', result.result);
+        console.log("getManagement data: ", result.result);
 
         this.management = result.result;
       }
@@ -668,7 +671,7 @@ export default {
     async getProformance() {
       const result = await PERFORMANCE();
       if (result.code === 1) {
-        console.log('getProformance data: ', result.result);
+        console.log("getProformance data: ", result.result);
 
         this.performance = result.result;
       }
@@ -677,7 +680,7 @@ export default {
     // 业绩变化
     async floor2_1_chart() {
       let HBZJINFORES = await YJBHINFO();
-      
+
       let date = [];
       let yyzsr = [];
       let gsjlr = [];
@@ -695,7 +698,7 @@ export default {
           right: "0",
           textStyle: {
             color: "#333",
-            fontSize: 14,
+            fontSize: 14
           }
         },
         legend: {
@@ -704,13 +707,13 @@ export default {
           }
         },
         textStyle: {
-          color: '#333'
+          color: "#333"
         },
         xAxis: {
           data: date,
           lineStyle: {
             color: "#333"
-          },
+          }
         },
         series: [
           {
@@ -737,7 +740,7 @@ export default {
     async floor2_2_chart() {
       let CHYSINFORES = await FJDYJINFO();
       // console.log(CHYSINFORES)
-      let date = ['一季度', '二季度', '三季度', '四季度'];
+      let date = ["一季度", "二季度", "三季度", "四季度"];
       let yyzsr = [];
       let gsjlr = [];
       $.each(CHYSINFORES.result, (i, item) => {
@@ -753,7 +756,7 @@ export default {
           right: "0",
           textStyle: {
             color: "#333",
-            fontSize: 14,
+            fontSize: 14
           }
         },
         legend: {
@@ -762,10 +765,10 @@ export default {
           }
         },
         textStyle: {
-          color: '#333'
+          color: "#333"
         },
         xAxis: {
-          data: date,
+          data: date
         },
         series: [
           {
@@ -793,7 +796,7 @@ export default {
       let result = await CIRCULATION();
 
       if (result.code === 1) {
-        console.log('floor3_1_chart data: ', result.result);
+        console.log("floor3_1_chart data: ", result.result);
 
         this.floor3_2_table = result.result;
 
@@ -813,15 +816,9 @@ export default {
      * 渲染年报主营构成
      */
     renderComposition() {
-      console.log('renderComposition data: ', this.composition);
+      console.log("renderComposition data: ", this.composition);
 
-      const colorOpts = [
-          "#03a0a7",
-          "#3281be",
-          "#b73131",
-          "#00d9be",
-          "#fdc300"
-        ]
+      const colorOpts = ["#03a0a7", "#3281be", "#b73131", "#00d9be", "#fdc300"];
 
       Object.keys(this.composition).forEach(key => {
         console.log(this.composition[key]);
@@ -829,7 +826,7 @@ export default {
         const compositions = this.composition[key];
         compositions.forEach((com, index) => {
           const data = [];
-          let date = '';
+          let date = "";
           const legendData = [];
           $.each(com, (i, item) => {
             let tempObj = {};
@@ -842,34 +839,36 @@ export default {
             legendData.push(item.major_composition);
           });
 
-          const myChart = echarts.init(document.getElementById("floor3_1_chart_" + key + "_" + index));
+          const myChart = echarts.init(
+            document.getElementById("floor3_1_chart_" + key + "_" + index)
+          );
           myChart.setOption(CHARTDATA.floor3_1_data);
           myChart.setOption({
             color: colorOpts,
             title: {
               text: date,
               textStyle: {
-                color: '#000'
+                color: "#000"
               },
-              left: 'center',
-              top: 'center',
-              right: 'center',
-              bottom: 'center',
+              left: "center",
+              top: "center",
+              right: "center",
+              bottom: "center"
             },
             series: {
               label: {
                 normal: {
                   textStyle: {
-                      color: '#000'
+                    color: "#000"
                   },
                   formatter: function(params, ticket, callback) {
                     var total = 0;
                     var percent = 0;
                     data.forEach(function(value, index, array) {
-                        total += value.value;
+                      total += value.value;
                     });
-                    percent = ((params.value / total) * 100).toFixed(1);
-                    return percent + '%';
+                    percent = (params.value / total * 100).toFixed(1);
+                    return percent + "%";
                   }
                 }
               },
@@ -877,21 +876,21 @@ export default {
             },
             legend: {
               // type: 'scroll',
-              orient: 'horizontal',
+              orient: "horizontal",
               bottom: 0,
-              left: 'left',
+              left: "left",
               textStyle: {
-                color: '#000'
+                color: "#000"
               },
               pageTextStyle: {
-                color: '#000'
+                color: "#000"
               },
               data: legendData
-            },
+            }
           });
         });
-      })
-    },
+      });
+    }
   }
 };
 </script>
