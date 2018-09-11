@@ -27,13 +27,11 @@ figcaption {
   margin: 0;
   border: 0;
 }
-
 ul,
 ol,
 li {
   list-style: none;
 }
-
 h1,
 h2,
 h3,
@@ -47,7 +45,6 @@ em {
   font-weight: normal;
   font-style: normal;
 }
-
 header,
 nav,
 section,
@@ -57,7 +54,6 @@ footer {
   margin: 0;
   border: 0;
 }
-
 table,
 tr,
 td {
@@ -65,13 +61,11 @@ td {
   padding: 0;
   border-collapse: collapse;
 }
-
 img,
 input,
 select {
   vertical-align: middle;
 }
-
 body,
 input,
 textarea,
@@ -79,7 +73,6 @@ select {
   -webkit-text-size-adjust: none;
   font: normal 16px/1.5 "\5FAE\8F6F\96C5\9ED1", Helvetica, verdana, san-serif;
 }
-
 input[type="text"],
 input[type="password"],
 input[type="button"],
@@ -87,89 +80,69 @@ input[type="submit"],
 textarea {
   -webkit-appearance: none;
 }
-
 input::-webkit-input-placeholder {
   color: #eeeeee !important;
 }
-
 input:-moz-placeholder {
   color: #eeeeee !important;
 }
-
 input::-moz-placeholder {
   color: #eeeeee !important;
 }
-
 input:-ms-input-placeholder {
   color: #eeeeee !important;
 }
-
 input,
 button,
 select,
 textarea {
   outline: none;
 }
-
 textarea {
   resize: none;
 }
-
 li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
 i,
 em {
   font-style: normal;
 }
-
 .clearFix:after {
   content: "";
   clear: both;
   display: block;
 }
-
 .clearFix {
   zoom: 1;
 }
-
 .fl {
   float: left;
 }
-
 .fr {
   float: right;
 }
-
 img {
   display: block;
 }
-
 .hidden {
   display: none;
 }
-
 .show {
   display: block;
 }
-
 input::-webkit-input-placeholder {
   color: #666 !important;
 }
-
 input::-moz-input-placeholder {
   color: #666 !important;
 }
-
 input::-ms-input-placeholder {
   color: #666 !important;
 }
-
 .flex {
   display: flex;
 }
