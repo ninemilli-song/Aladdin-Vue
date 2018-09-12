@@ -12,7 +12,6 @@
         <span class="flex">业绩总览</span>
         <i></i>
       </div>
-      
       <div class="floor_1">
         <div class="info-descript">
           {{
@@ -298,9 +297,9 @@
 <script>
 import echarts from "echarts";
 import {
-  COMPANYINFO,
-  YJZLINFO,
-  FHPSINFO,
+    COMPANYINFO,
+    YJZLINFO,
+    FHPSINFO,
   JYZKINFO,
   JYZKDJDINFO,
   MLLINFO,
