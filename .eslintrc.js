@@ -12,6 +12,10 @@ module.exports = {
         "airbnb-base",
         "plugin:vue/essential"
     ],
+    "plugins": [
+        'vue',
+        'vuefix',
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -40,7 +44,11 @@ module.exports = {
             "exports": "never",
             "functions": "ignore"
         }],
-        "prefer-destructuring": ["error", {"object": false, "array": false}]
+        "prefer-destructuring": ["error", {"object": false, "array": false}],
+        'import/extensions': ['error', 'always', {
+            'js': 'never',
+            'vue': 'never'
+          }]
     },
     "settings": {
         "import/resolve": {

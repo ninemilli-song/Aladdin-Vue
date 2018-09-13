@@ -145,7 +145,7 @@
 
     </section>
 
-    <section class="floor_second">
+    <section class="floor_second" v-if="(fhps.bonus_this_year && fhps.bonus_this_year.length > 0) || (fhps.bonus_last_year && fhps.bonus_last_year.length > 0)">
       <div class="chart_title flex">
         <span class="flex">分红配送</span>
         <i></i>

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import LyTab from 'ly-tab';
-import First from '@/pages/quarter/First';
+import First from '../pages/quarter/First';
 import Second from '@/pages/quarter/Second';
 import Third from '@/pages/quarter/Third';
 import Fourth from '@/pages/quarter/Fourth';
@@ -22,7 +22,7 @@ export default new Router({
 			component: Second
 		},
 		{
-			path: '/year/third',
+			path: '/year/third', 
 			name: 'Third',
 			component: Third
 		},
