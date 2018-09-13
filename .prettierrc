@@ -1,0 +1,5 @@
+{
+	"useTabs": false,
+	"singleQuote": true,
+    "tabWidth": 4,         // Specify the number of spaces per indentation-level.
+}
