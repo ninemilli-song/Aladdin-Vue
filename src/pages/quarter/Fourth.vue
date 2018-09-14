@@ -14,7 +14,7 @@
 import YearPage from '../../components/YearPage.vue';
 
 export default {
-    name: 'third-page',
+    name: 'fourth-page',
     data() {
         return {
             rootClass: 'first_page',

@@ -924,5 +924,5 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-// @import "./yearpage.scss";
+@import "./yearpage.scss";
 </style>
