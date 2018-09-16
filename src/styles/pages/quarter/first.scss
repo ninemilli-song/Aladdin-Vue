@@ -1,149 +1,177 @@
 
 .first_page {
   background: #0f202e;
-}
-.banner {
-  background: url("../../static/images/bg_skin_home_1.png");
-}
 
-.logo_name {
-  color: #fff;
-}
-
-.title {
-  color: #fff;
-}
-
-.chart_title {
-  color: #fff;
-}
-
-.chart_title i {
-  background: #f08833;
-}
-
-.discrption {
-  margin-top: 1rem;
-}
-
-.discrption li {
-  background: rgba(255, 255, 255, 0.1);
-}
-.discrption li h5 {
-  color: #fff;
-}
-.discrption li i {
-  background: #f08833;
-}
-.discrption li p {
-  color: #fff;
-}
-
-.floor_text p {
-  color: #fff;
-}
-
-.floor_1 {
-  .info-descript {
-    background-color: #fff;
-  }
-
-  .info-block {
-    li {
-      background-color: #273643;
-      border-top: 0.4px solid #05b2d9;
-
-      .name {
-        color: #fff;
-      }
-
-      .number {
-        color: #fff;
-      }
-
-      .growth {
-        color: #049ca3;
-      }
+  /deep/ {
+    .banner {
+      background: url("../../static/images/bg_skin_home_1.png");
     }
-  }
-}
 
-.pb-pe {
-  color: #fff;
-
-  .pb {
-    background: url("../../static/images/card_left_1.png");
-  }
-
-  .pe {
-    background: url("../../static/images/card_right_1.png");
-  }
-}
-
-.contrast {
-  .contrast-block {
-    h5 {
+    .logo_name {
       color: #fff;
     }
 
-    .name {
+    .title {
+      color: #fff;
+    }
+    
+    .chart_title {
+      color: #fff;
+    }
+    
+    .chart_title i {
+      background: #f08833;
+    }
+    
+    .discrption {
+      margin-top: 1rem;
+    }
+
+    .discrption li {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .discrption li h5 {
+      color: #fff;
+    }
+    .discrption li i {
+      background: #f08833;
+    }
+    .discrption li p {
+      color: #fff;
+    }
+    
+    .floor_text p {
       color: #fff;
     }
 
-    .describe {
+    .floor_1 {
+      .info-descript {
+        background-color: #fff;
+      }
+    
+      .info-block {
+        li {
+          background-color: #273643;
+          border-top: 0.4px solid #05b2d9;
+    
+          .name {
+            color: #fff;
+          }
+    
+          .number {
+            color: #fff;
+          }
+    
+          .growth {
+            color: #049ca3;
+          }
+        }
+      }
+    }
+
+    .floor_1 {
+      .info-descript {
+        background-color: #fff;
+      }
+    
+      .info-block {
+        li {
+          background-color: #273643;
+          border-top: 0.4px solid #05b2d9;
+    
+          .name {
+            color: #fff;
+          }
+    
+          .number {
+            color: #fff;
+          }
+    
+          .growth {
+            color: #049ca3;
+          }
+        }
+      }
+    }
+
+    .pb-pe {
+      color: #fff;
+    
+      .pb {
+        background-image: url("../../static/images/card_left_1.png");
+      }
+    
+      .pe {
+        background-image: url("../../static/images/card_right_1.png");
+      }
+    }
+
+    .contrast {
+      .contrast-block {
+        h5 {
+          color: #fff;
+        }
+    
+        .name {
+          color: #fff;
+        }
+    
+        .describe {
+          color: #fff;
+        }
+    
+        .spot {
+          .number {
+            color: #049ca3;
+          }
+    
+          span {
+            color: #fff;
+          }
+        }
+    
+        .circle {
+          background-image: url("../../static/images/bg_round_1.png");
+        }
+    
+        .rect {
+          background-color: #273643;
+        }
+      }
+    }
+
+    .floor_2 {
+      color: #fff;
+    
+      .now {
+        .bonus {
+          background-image: url("../../static/images/bg_rhombus_1.png");
+        }
+      }
+    }
+
+    .fjdyj-title {
+      border-left: 0.3rem solid #05B2D9;
       color: #fff;
     }
-
-    .spot {
-      .number {
-        color: #049ca3;
-      }
-
-      span {
-        color: #fff;
+    
+    .tabs {
+      color: #768591;
+      
+      .ly-tab {
+        background-color: #1c3449;
       }
     }
-
-    .circle {
-      background: url("../../static/images/bg_round_1.png");
+    
+    .business-info {
+      color: #fff;
     }
-
-    .rect {
-      background-color: #273643;
+    
+    .floor_3_table {
+      color: #fff;
     }
-  }
-}
-
-.floor_2 {
-  color: #fff;
-
-  .now {
-    .bonus {
-      background: url("../../static/images/bg_rhombus_1.png");
+    .floor_3_table li:nth-child(1) {
+      background: #05B2D9;
     }
   }
-}
-
-.fjdyj-title {
-  border-left: 0.3rem solid #05B2D9;
-  color: #fff;
-}
-
-.tabs {
-  color: #768591;
-  
-  .ly-tab {
-    background-color: #1c3449;
-  }
-}
-
-.business-info {
-  color: #fff;
-}
-
-.floor_3_table {
-  color: #fff;
-}
-.floor_3_table li:nth-child(1) {
-  background: #05B2D9;
 }

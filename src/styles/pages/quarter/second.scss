@@ -1,164 +1,167 @@
-.first_page {
+.second_page {
   background: #fff;
-}
-.banner {
-  background: url("../../static/images/bg_skin_home_2.png");
-}
 
-.logo_name {
-  color: #333;
-}
-
-.title {
-  color: #000;
-}
-
-.chart_title {
-  color: #000;
-}
-
-.chart_title i {
-  background: #44A1E8;
-}
-
-.discrption li {
-  background: #F6F6F6;
-}
-.discrption li h5 {
-  color: #333
-}
-.discrption li i {
-  background: #BA44E8;
-}
-.discrption li p {
-  color: #666666;
-}
-
-.more_btn {
-  color: #44A1E8;
-}
-
-.more_btn i {
-  background: url("../../static/images/arrow_unfold_2.png") no-repeat;
-}
-
-.floor_text p {
-  color: #333;
-}
-
-.floor_3_table {
-  color: #666;
-}
-
-.floor_3_table li:nth-child(1) {
-  background: #44a1e8;
-  color: #000
-}
-
-.floor4_content {
-  color: #333;
-}
-
-// =======================================
-.floor_1 {
-  .info-descript {
-    background-color: #44A1E8;
-    color: #fff;
-  }
-
-  .info-block {
-    li {
-      background-color: #f6f6f6;
-      border-top: 0.4px solid #BA44E8;
-
-      .name {
-        color: #000;
-      }
-
-      .number {
-        color: #000;
-      }
-
-      .growth {
-        color: #049ca3;
-      }
+  /deep/ {
+    .banner {
+      background-image: url("../../static/images/bg_skin_home_2.png");
     }
-  }
-}
-
-.pb-pe {
-  color: #fff;
-
-  .pb {
-    background: url("../../static/images/card_left_2.png");
-  }
-
-  .pe {
-    background: url("../../static/images/card_right_2.png");
-  }
-}
-
-.contrast {
-  .contrast-block {
-    h5 {
+    
+    .logo_name {
+      color: #333;
+    }
+    
+    .title {
       color: #000;
     }
-
-    .name {
+    
+    .chart_title {
       color: #000;
     }
-
-    .describe {
-      color: #000;
+    
+    .chart_title i {
+      background: #44A1E8;
     }
-
-    .spot {
-      .number {
-        color: #049ca3;
+    
+    .discrption li {
+      background: #F6F6F6;
+    }
+    .discrption li h5 {
+      color: #333
+    }
+    .discrption li i {
+      background: #BA44E8;
+    }
+    .discrption li p {
+      color: #666666;
+    }
+    
+    .more_btn {
+      color: #44A1E8;
+    }
+    
+    .more_btn i {
+      background-image: url("../../static/images/arrow_unfold_2.png") no-repeat;
+    }
+    
+    .floor_text p {
+      color: #333;
+    }
+    
+    .floor_3_table {
+      color: #666;
+    }
+    
+    .floor_3_table li:nth-child(1) {
+      background: #44a1e8;
+      color: #000
+    }
+    
+    .floor4_content {
+      color: #333;
+    }
+    
+    // =======================================
+    .floor_1 {
+      .info-descript {
+        background-color: #44A1E8;
+        color: #fff;
       }
-
-      span {
+    
+      .info-block {
+        li {
+          background-color: #f6f6f6;
+          border-top: 0.4px solid #BA44E8;
+    
+          .name {
+            color: #000;
+          }
+    
+          .number {
+            color: #000;
+          }
+    
+          .growth {
+            color: #049ca3;
+          }
+        }
+      }
+    }
+    
+    .pb-pe {
+      color: #fff;
+    
+      .pb {
+        background-image: url("../../static/images/card_left_2.png");
+      }
+    
+      .pe {
+        background-image: url("../../static/images/card_right_2.png");
+      }
+    }
+    
+    .contrast {
+      .contrast-block {
+        h5 {
+          color: #000;
+        }
+    
+        .name {
+          color: #000;
+        }
+    
+        .describe {
+          color: #000;
+        }
+    
+        .spot {
+          .number {
+            color: #049ca3;
+          }
+    
+          span {
+            color: #000;
+          }
+        }
+    
+        .circle {
+          background-image: url("../../static/images/bg_round_2.png");
+        }
+    
+        .rect {
+          background-color: #f6f6f6;
+        }
+      }
+    }
+    
+    .floor_2 {
+      color: #fff;
+    
+      .now {
+        .bonus {
+          background-image: url("../../static/images/bg_rhombus_3.png");
+        }
+      }
+    
+      .past {
         color: #000;
       }
     }
-
-    .circle {
-      background: url("../../static/images/bg_round_2.png");
+    
+    .fjdyj-title {
+      border-left: 0.3rem solid #05B2D9;
+      color: #000;
     }
-
-    .rect {
-      background-color: #f6f6f6;
+    
+    .tabs {
+      color: #768591;
+      
+      .ly-tab {
+        background-color: #f6f6f6;
+      }
+    }
+    
+    .business-info {
+      color: #000;
     }
   }
-}
-
-.floor_2 {
-  color: #fff;
-
-  .now {
-    .bonus {
-      background: url("../../static/images/bg_rhombus_3.png");
-    }
-  }
-
-  .past {
-    color: #000;
-  }
-}
-
-.fjdyj-title {
-  border-left: 0.3rem solid #05B2D9;
-  color: #000;
-}
-
-.tabs {
-  color: #768591;
-  
-  .ly-tab {
-    background-color: #f6f6f6;
-  }
-}
-
-.business-info {
-  color: #000;
 }

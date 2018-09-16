@@ -1,6 +1,6 @@
 <!-- first_page -->
 <template>
-<div>
+<div class="first_page">
     <year-page
         v-bind:tabOptions="tabOptions"
         v-bind:colors="colors"
@@ -62,6 +62,6 @@ export default {
     }
 };
 </script>
-<style lang='scss'>
+<style lang='scss' scoped>
     @import "../../styles/pages/quarter/first.scss";
 </style>

@@ -1,6 +1,6 @@
 <!-- fourth_page -->
 <template>
-<div>
+<div class="fourth_page">
     <year-page
         v-bind:tabOptions="tabOptions"
         v-bind:colors="colors"
@@ -17,7 +17,7 @@ export default {
     name: 'fourth-page',
     data() {
         return {
-            rootClass: 'first_page',
+            rootClass: 'fourth_page',
             tabOptions: {
                 activeColor: '#000',
                 lineWidth: 0
@@ -62,6 +62,6 @@ export default {
     }
 };
 </script>
-<style lang='scss'>
+<style lang='scss' scoped>
     @import "../../styles/pages/quarter/fourth.scss";
 </style>

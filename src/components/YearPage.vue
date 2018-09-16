@@ -1,5 +1,5 @@
 <template>
-    <div v-bind:class="[rootClass]">
+    <div>
         <div class="banner">
             <div class="cloth" @click="clothHandle"></div>
             <div class="logo flex bounceIn animated"><img :src="logoImg" alt=""></div>
