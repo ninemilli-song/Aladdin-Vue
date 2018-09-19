@@ -2,8 +2,10 @@ const axios = require('axios');
 const {
     getParameter
 } = require('../utils/utils');
-const code = getParameter(window.location.search, "code");
-const date = getParameter(window.location.search, "date");
+
+const code = getParameter(window.location.search, 'code');
+const date = getParameter(window.location.search, 'date');
+// let url = "http://v2.dongmibang.com/api/notice";
 // let url = "http://v2.dongmibang.com/api/notice";
 let url = '';
 // 获取公司基本信息
